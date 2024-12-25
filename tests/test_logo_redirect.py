@@ -1,7 +1,7 @@
 import allure
+
 from conftest import driver
 from page_objects.main_page import MainPage
-import pytest
 
 
 class TestLogoRedirect:

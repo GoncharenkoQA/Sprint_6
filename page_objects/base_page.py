@@ -1,4 +1,3 @@
-from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 import allure
@@ -32,11 +31,6 @@ class BasePage:
     @allure.step('Перейти на другую вкладку')
     def switch_to_next_tab(self):
         self.driver.switch_to.window(self.driver.window_handles[1])
-
-    @allure.step('Получить заголовок страницы')
-    def get_page_title(self):
-        WebDriverWait(self.driver, 6).until(expected_conditions.presence_of_element_located(title_of_page))
-        return self.driver.title
 
     @allure.step('Проверить отображение элемента')
     def check_displaying_of_element(self, locator):
